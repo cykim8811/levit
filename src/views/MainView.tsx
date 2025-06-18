@@ -38,7 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                     후기 {reviews.toLocaleString()}
                 </div>
             </div>
-            <div className="text-xs text-gray-500 mt-2 w-full">
+            <div className="text-[0.65rem] max-h-18 rounded-lg bg-gray-200 p-2 text-gray-800 mt-2 w-full">
                 {reviewText
                     ? reviewText.split(/(\*\*.*?\*\*)/g).map((part, idx) =>
                         part.startsWith('**') && part.endsWith('**') ? (
@@ -60,8 +60,23 @@ const MainView: React.FC = () => {
                 플랫폼 이름
             </div>
             <div className="flex-1 w-full grid grid-cols-2 gap-4 p-4 overflow-y-auto">
-                <ProductCard title="리포데이 올인원 맨즈팩 종합비타민 30개..." price="81,500원" rating={4.5} reviews={1321} image={p1} reviewText="아이가 **수험생**인데, 집중력을 ... 일단 **아침에 늦잠**자는 버릇이 없어져서 ..." />
-                <ProductCard title="대웅제약 임팩타뮨 30p, 40g, 1개" price="19,400원" rating={4.2} reviews={512} image={p2} reviewText="**부모님 생신**에 선물로 드렸는데, **면역력**에 좋다고 하셔서 ..." />
+                <ProductCard title="리포데이 올인원 맨즈팩 종합비타민 30개..." price="81,500원" rating={4.5} reviews={1321} image={p1} reviewText="**부모님 생신**에 선물로 드렸는데, 포장이 고급스러워서 ... **면역력**에 좋다고 해서 ..." />
+                <ProductCard title="대웅제약 임팩타뮨 30p, 40g, 1개" price="19,400원" rating={4.2} reviews={512} image={p2} reviewText="아이가 **수험생**인데, 집중력을 ... 일단 **아침에 늦잠**자는 버릇이 없어져서 ..." />
+                <ProductCard title="리포데이 올인원 맨즈팩 종합비타민 30개..." price="81,500원" rating={4.5} reviews={1321} image={p1} reviewText="**부모님 생신**에 선물로 드렸는데, 포장이 고급스러워서 ... **면역력**에 좋다고 해서 ..." />
+                <ProductCard title="대웅제약 임팩타뮨 30p, 40g, 1개" price="19,400원" rating={4.2} reviews={512} image={p2} reviewText="아이가 **수험생**인데, 집중력을 ... 일단 **아침에 늦잠**자는 버릇이 없어져서 ..." />
+                <div className="col-span-full mt-8 mb-4">
+                    <p className="text-md text-center">
+                        영양제를 누가 드시나요?
+                    </p>
+                    <div className="flex flex-row items-center mt-2 mb-32">
+                        <div className="flex-1 text-center bg-white border border-gray-200 rounded-lg p-1 m-2">
+                            본인
+                        </div>
+                        <div className="flex-1 text-center bg-white border border-gray-200 rounded-lg p-1 m-2">
+                            선물용
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
